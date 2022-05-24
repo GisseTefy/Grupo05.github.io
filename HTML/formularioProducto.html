@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Producto</title>
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
+    integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--<link rel="stylesheet" href="Recursos/estilos.css" type="text/css"/>-->
+  <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+    <style>
+      body{
+        background: rgb(245, 190, 87);
+      }
+  
+        
+        .row{
+          color: white;
+          background: rgb(206, 121, 255);
+          border-radius: 12px;
+          padding: 24px;
+          margin-top: 24px;
+          box-shadow: 0 0 12px black;
+        }
+  
+        
+    </style>
+  </head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8"/>  
+<body>
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+
+      <form action="./Script_PHP/guardar.php" method="POST" name="FormProducto">
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+
+          <fieldset id="Datos_Basicos">
+            <legend>Datos Básicos</legend>
+            
+          Nombre del Producto
+            <input id="Basico1" type="text" class="form-control" value="" name="txtNombre" autofocus required>
+            <br>
+          <br>
+          
+          Descripción<br>
+            <textarea id="Basico2" class="form-control" maxlength="50" name="txtaDescripcion" required></textarea>
+            
+          <br><br>
+            Foto:
+            <br> <input id="Basico3" class="form-control" type="file" name="foto" required>
+            
+          <br><br>
+            <input id="Basico4" class="form-checkbox" type="checkbox" name="ckboxLogistica" value="Logistica">Añadir información confidencial
+            
+          </fieldset>
+          
+          <br>
+        </div>
+        <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+          <fieldset>
+            <legend>Datos Económicos</legend>
+            <table align="left" border="0">
+              <tr>
+                  <td>Precio: </td>
+                <td> <input id="Económico1" class="form-control" type="number" value="" min="100" max="200" required> </td>
+              
+                <td>$</td>
+                <td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td>
+                <td>Impuestos: </td>
+                <td>
+                  <select name="cmbImpuesto" id="Económico2" class="form-control"> 
+                    <option value="4">4%</option>
+                    <option value="7">7%</option>
+                    <option value="16">16%</option>
+                    <option value="25">25%</option>
+                  </select></td>
+              </tr>
+            </table>		
+          <br><br>
+            <label>Promoción</label><br>
+            <input type="radio" name="rbPromocion" value="Ninguno" id="Económico3" checked>Ninguno  <br>
+            <input type="radio" name="rbPromocion" value="Gratuito" id="Económico3">Tranporte Gratuito<br>
+            <input type="radio" name="rbPromocion" value="Descuento" id="Económico3">Descuento 5%<br>
+          </fieldset>
+          
+          <button type="submit" class="btn btn-success" name="btnGuardar" value="Guardar Cambios">Guardar Cambios</button>
+          <button type="reset" class="btn btn-warning" name="btnReset" value="Borrar los datos introducidos">Borrar los datos introducidos</button>
+
+          <a href="..//index.html" class="btn btn-primary">Regresar</a>
+
+        </div>
+        
+        
+      
+      
+        </form>
+    </div>
+  </div>
+</div>
+
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="../js/vendor/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
+  </body>
+</html>

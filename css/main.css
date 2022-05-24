@@ -1,0 +1,63 @@
+.formatorInput{
+  display: block;
+  width: 100%;
+  font-size: 20px;
+}
+
+.botonContacto{
+  background: linear-gradient(#FFDA63, #FFB940);
+  border:0;
+  color: brown;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 20px;
+}
+.botonContacto:active{
+  transform: scale(0.95);
+}
+
+.margen{
+   margin-top: 50px;
+   margin-left: 17%;
+}
+.col-centered{ 
+   display: flex; 
+   justify-content: center; 
+   align-items: center;
+}
+.ul-centered {
+   justify-content: center;
+   display: flex;
+}
+.color1{
+   background-color: #D4ECDD;
+}
+
+.color2{
+   background-color: #345B63;
+}
+
+.color3{
+   background-color: #112031;
+   color: #fff;
+}
+.color4{
+   color: #fff;
+}
+.color6{
+   background-color: #DEDEDE;
+}
+.color7{
+   background-color: #97A8DC;
+}
+.color8{
+   background-color: #A9BCF5;
+   color: #fff;
+}
+
+
+
+
+
+
+

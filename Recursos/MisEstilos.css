@@ -1,0 +1,45 @@
+/**{
+  margin: 0;
+  padding: 0;
+  font-family:sans-serif;
+  box-sizing: border-box;
+}
+*/
+body{
+  background: #DEDEDE;
+}
+
+input{
+  /*display: block;
+  padding: 10px;
+  width: 90%;
+  margin: 10px;
+  font-size: 20px;
+  display: block;*/
+  width: 100%;
+}
+
+input[type=submit]{
+  background: linear-gradient(#FFDA63, #FFB940);
+  border:0;
+  color: brown;
+  opacity: 0.8;
+  cursor: pointer;
+  border-radius: 20px;
+}
+
+input[tyoe=submit]:hover{
+  opacity: 1;
+}
+
+input[tyoe=submit]:active{
+  transform: scale(0.95);
+}
+
+/* RESPONSIVE */
+/*
+@media(max-width:780px){
+  form{
+    width: 95%;
+  }
+}*/

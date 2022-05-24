@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>LOGISTICA</title>
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="../css/main.css">
+  <link rel="stylesheet" href="../css/icomoon.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.css"
+    integrity="sha512-1hsteeq9xTM5CX6NsXiJu3Y/g+tj+IIwtZMtTisemEv3hx+S9ngaW4nryrNcPM4xGzINcKbwUJtojslX2KG+DQ=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--<link rel="stylesheet" href="Recursos/estilos.css" type="text/css"/>-->
+  <style>
+    body{
+      background: rgb(245, 190, 87);
+    }
+
+      
+      .row{
+        color: white;
+        background: rgb(206, 121, 255);
+        border-radius: 12px;
+        padding: 24px;
+        margin-top: 24px;
+        box-shadow: 0 0 12px black;
+      }
+
+      .btn-warning{
+        margin-top:12px;
+      }
+  </style>
+  <script src="../js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+</head>
+
+<body>
+  <div class="container ">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+
+        <form action="./Script_PHP/registrar.php" method="POST" name="FormDireccion" target="_blank">
+          <fieldset>
+            <!--agrupa varios elementos del form-->
+            <legend>DIRECCION DE ENVIO <i class="fa-solid fa-house"></i></legend>
+            Calle Principal <br>
+            <input type="text" class="form-control" name="txtPrincipal" value="">
+            <br><br>
+            Transversal<br>
+            <input type="text" class="form-control" name="txtTransversal" value="">
+
+            <br>
+            <!--<input type="checkbox" name="chbEntrega1" value="PROPIETARIO"checked> Entrega al propietario.<br>
+              <input type="checkbox" name="chbEntrega2" value="TERCERO"> Entrega a un tercero.-->
+            <input type="radio" id="entrega" name="rbEntrega2" value="PROPIETARIO" checked>Propietario<br>
+            <input type="radio" id="entrega" name="rbEntrega2" value="TERCERO">Tercero
+
+            <br><br>
+            Cantones: <select name="cmbCantones" class="form-control">
+              <optgroup label="PICHINCHA">
+                <option value="Q">Quito</option>
+                <option value="R">Rumiñahui</option>
+                <option value="M">Mejia</option>
+              </optgroup>
+
+              <optgroup label="GUAYAS">
+                <option value="G">Guayaquil</option>
+                <option value="S">Santa Elena</option>
+                <option value="SL">Salinas</option>
+              </optgroup>
+
+            </select>
+
+            <br><br>
+            <button type="submit" name="SubmitDireccion" value="REGISTRAR" class="btn btn-success">REGISTRAR <i
+                class="fa-solid fa-list-check"></i></button>
+          </fieldset>
+        </form>
+      </div>
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6 ">
+
+        <form action="./Script_PHP/procesa.php" method="POST" name="FormConfidencial" target="_blank">
+
+          <fieldset>
+            <legend>INFORMACIÓN CONFIDENCIAL <i class="fa-solid fa-circle-info"></i></legend>
+            Código Postal:
+            <input type="password" class="form-control" name="pswCodigoPostal" value="">
+
+            <br><br>
+            Referencia de la Dirección:<br>
+            <textarea name="Mensaje" class="form-control" rows="3" cols="30" id="Mensaje"></textarea><br>
+            <br>
+            <button type="submit" name="SubmitConfidencial" class="btn btn-success" value="PROCESAR"> PROCESAR <i class="fa-solid fa-bars-progress"></i></button>
+
+          </fieldset>
+        </form>
+
+        <a href="..//index.html" class="btn btn-warning"> Regresar</a>
+      </div>
+
+    </div>
+
+
+  </div>
+
+
+
+
+  <script>window.jQuery || document.write('<script src="../js/vendor/jquery-1.11.2.min.js"><\/script>')</script>
+  <script src="../js/vendor/bootstrap.min.js"></script>
+  <script src="../js/main.js"></script>
+
+</body>
+
+</html>
